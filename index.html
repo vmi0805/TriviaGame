@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Bitcoin Trivia</title>
+      <link rel="stylesheet" href="assets/css/reset.css">
+      <link rel="stylesheet" href="assets/css/style.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+<div class ="header-container"> 
+	<div id="title">Bitcoin Trivia
+	<div id="bitcoin-image-div">
+		<img src="assets/images/bitcoin.jpeg" id="bitcoin-image-1" alt="bitcoin image">
+		<img src="assets/images/bitcoin.jpeg" id="bitcoin-image-2" alt="bitcoin image">
+	</div>
+</div>
+
+<div class ="questions-container"> 
+
+	<div id="start">
+		<button id="start">Start
+		</button>
+	</div>
+
+	<div id="q1-box">
+		<div id="q1">
+			In what year was the first bitcoin block mined?
+		</div>
+		<div id="q1-answers">
+			<form>
+				<input type="radio" name="q1-answers-button" value="2003"/>2003
+				<input type="radio" name="q1-answers-button" value="2006"/>2006
+				<input type="radio" name="q1-answers-button" value="2009"/>2009
+			</form>
+		</div>
+	</div>
+
+	<div id="q2-box">
+		<div id="q2">
+			Who created bitcoin?
+		</div>
+		<div id="q2-answers">
+			<form>
+				<input type="radio" name="q2-answers-button" value="Kyle"/>Kyle Makinen
+				<input type="radio" name="q2-answers-button" value="Sir"/>Sir Richard Branson
+				<input type="radio" name="q2-answers-button" value="Satoshi"/>Satoshi
+			</form>
+		</div>
+	</div>	
+
+	<div id="q3-box">
+		<div id="q3">
+			What defines a bitcoin block header?
+		</div>
+		<div id="q3-answers">
+			<form>
+				<input type="radio" name="q3-answers-button" value="None"/>Nothing, a block does not have a unique identifier
+				<input type="radio" name="q3-answers-button" value="Hash-block-data"/>Hash of block data
+				<input type="radio" name="q3-answers-button" value="Hash-previous-block"/>Previous block hash
+			</form>
+		</div>
+	</div>
+
+	<div id="done-div">
+		<button id="done">Done
+		</button>
+		<div id="countdown">
+			15
+		</div>
+			<div id="time">
+				Time remaining
+			</div>
+		</div>
+
+	<div id="results">
+		<div id="spacer">
+			<div id="correct">Number of questions correct</div>
+			<div id="number-correct"></div>
+		</div>
+		<div id="spacer">
+			<div id="wrong">Number of questions wrong</div>
+			<div id="number-wrong"></div>
+		</div>
+	</div>
+
+</div>
+
+
+
+</div>
+
+</div>
+
+<script>
+
+
+function stop(){
+
+alert("Game over!  Refresh the page to restart the game.");
+
+
+// change visibility
+
+    $("#q1, #q2, #q3, #q1-answers, #q2-answers, #q3-answers, #q1-box, #q2-box, #q3-box").css({
+        'visibility': 'hidden',
+    });
+    $("#results").css({
+        'visibility': 'visible',
+    });
+
+    clearInterval(intervalId);
+
+
+// count rights, wrong and blanks
+
+	let x = $('input[name=q1-answers-button]:checked').val();
+    console.log(x);
+
+    let y = $('input[name=q2-answers-button]:checked').val();
+    console.log(y);
+
+    let z = $('input[name=q3-answers-button]:checked').val();
+    console.log(z);
+
+    let numRight = 0;
+    let numWrong = 0;
+
+    if(x === "2009"){
+    	numRight++
+    } else{
+    	numWrong++
+    }
+
+    if(y === "Satoshi"){
+    	numRight++
+    } else{
+    	numWrong++
+    }
+
+    if(z === "None"){
+    	numRight++
+    } else{
+    	numWrong++
+    }
+
+    if(x === ""){
+    	numWrong++
+    }
+
+    if(y === ""){
+    	numWrong++
+    }
+
+    if(z === ""){
+    	numWrong++
+    }
+
+    $("#number-correct").html(numRight)
+    $("#number-wrong").html(numWrong)
+
+}
+
+
+$("#start").click(function() {
+    $("#q1, #q2, #q3, #q1-answers, #q2-answers, #q3-answers, #q1-box, #q2-box, #q3-box").css({
+        'visibility': 'visible',
+    });
+    $("#results").css({
+        'visibility': 'hidden',
+    });
+    run()
+});
+
+let number = 15;
+
+function run() {
+      intervalId = setInterval(decrement, 1000);
+    }
+
+    console.log(number)
+    
+    //  The decrement function.
+    function decrement() {
+
+      //  Decrease number by one.
+      number--;
+
+      //  Show the number in the #show-number tag.
+      $("#countdown").html("<p>" + number + "</p>");
+
+      //  Once number hits zero...
+      if (number === 0) {
+
+        //  ...run the stop function.
+        stop();        
+      }
+    }
+
+
+$("#done").click(function() {
+    $("#q1, #q2, #q3, #q1-answers, #q2-answers, #q3-answers, #q1-box, #q2-box, #q3-box").css({
+        'visibility': 'hidden',
+    });
+     $("#results").css({
+        'visibility': 'visible',
+    });
+
+    // count rights, wrongs and blanks
+
+    let x = $('input[name=q1-answers-button]:checked').val();
+    console.log(x);
+
+    let y = $('input[name=q2-answers-button]:checked').val();
+    console.log(y);
+
+    let z = $('input[name=q3-answers-button]:checked').val();
+    console.log(z);
+
+    let numRight = 0;
+    let numWrong = 0;
+
+    if(x === "2009"){
+    	numRight++
+    } else{
+    	numWrong++
+    }
+
+    if(y === "Satoshi"){
+    	numRight++
+    } else{
+    	numWrong++
+    }
+
+    if(z === "None"){
+    	numRight++
+    } else{
+    	numWrong++
+    }
+
+    if(x === ""){
+    	numWrong++
+    }
+
+    if(y === ""){
+    	numWrong++
+    }
+
+    if(z === ""){
+    	numWrong++
+    }
+
+    $("#number-correct").html(numRight)
+    $("#number-wrong").html(numWrong)
+
+});
+
+
+</script>
+
+</body>
+
+</html>

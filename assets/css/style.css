@@ -1,0 +1,249 @@
+.header-container{
+	width: 800px;
+}
+
+#title{
+	color: white;
+	background-color: rgb(245,148,44);
+	font-size: 60px;
+	width: 100%;
+	padding: 12px 12px 12px 12px;
+	font-weight: bold;
+	text-align: center;
+	border: solid grey 12px;
+}
+
+#bitcoin-image-1{
+	height:84px;
+	width: auto;
+	position: absolute;
+	margin-top: -72px;
+	margin-left: -412px;
+}
+
+#bitcoin-image-2{
+	height:84px;
+	width: auto;
+	position: absolute;
+	margin-top: -72px;
+	margin-left: 286px;
+}
+
+.questions-container{
+	border: solid grey 12px;
+	width: 824px;
+	height: 420px;	
+}
+
+#start{
+	position: absolute;
+	margin-top: -10px;
+	margin-left: 204px; 
+}
+
+#q1-box{
+/*	border: solid red 4px;*/
+	margin-top: 20px;
+	height: 120px;
+	visibility: hidden;
+}
+
+#q2-box{
+/*	border: solid red 4px;*/
+	height: 120px;
+	visibility: hidden;
+}
+
+#q3-box{
+/*	border: solid red 4px;*/
+	height: 120px;
+	visibility: hidden;
+}
+
+#q1{
+	border: solid grey 2px;
+	width: 80%;
+	height: 18px;
+	margin-left: 70px;
+	margin-top: 4px;
+	margin-bottom: 4px;
+	visibility: hidden;
+	padding: 6px 6px 6px 6px;
+}
+
+#q2{
+	border: solid grey 2px;
+	width: 80%;
+	height: 18px;
+	margin-left: 70px;
+	margin-top: 4px;
+	margin-bottom: 4px;
+	visibility: hidden;
+	padding: 6px 6px 6px 6px;
+}
+
+#q3{
+	border: solid grey 2px;
+	width: 80%;
+	height: 18px;
+	margin-left: 70px;
+	margin-top: 4px;
+	margin-bottom: 4px;
+	visibility: hidden;
+	padding: 6px 6px 6px 6px;
+}
+
+#q1-answers{
+	border: solid grey 2px;
+	width: 80%;
+	height: 20px;
+	margin-left: 70px;
+	margin-top: 4px;
+	margin-bottom: 4px;
+	visibility: hidden;
+	padding: 6px 6px 6px 6px;
+	background-color: grey;
+}
+
+#q2-answers{
+	border: solid grey 2px;
+	width: 80%;
+	height: 20px;
+	margin-left: 70px;
+	margin-top: 4px;
+	margin-bottom: 4px;
+	visibility: hidden;
+	padding: 6px 6px 6px 6px;
+	background-color: grey;
+}
+
+#q3-answers{
+	border: solid grey 2px;
+	width: 80%;
+	height: 20px;
+	margin-left: 70px;
+	margin-top: 4px;
+	margin-bottom: 4px;
+	visibility: hidden;
+	padding: 6px 6px 6px 6px;
+	background-color: grey;
+}
+
+#done-div{
+/*	border: solid red 4px;*/
+	height: 25px;
+	width: 400px;
+	position: absolute;
+	margin-left: 416px;
+	margin-top: 6px;
+}
+
+#done{
+	margin-top: 3px;
+	background-color: rgb(245,148,44);
+	border-radius: 10px; 
+	height: 20px;
+	width: 80px;
+	font-weight: bold;
+	float: right;
+}
+
+#countdown{
+	border: solid grey 2px;
+	border-radius: 10px;
+	width: 80px;
+	text-align: center;
+	float: right;
+	margin-top: 3px;
+	margin-right: 10px;
+	color: grey;
+}
+
+#time{
+	border: solid grey 2px;
+	border-radius: 10px;
+	float: left;
+	padding: 0px 12px 0px 12px;
+	margin-top: 3px;
+	margin-left: 95px;
+	background-color: grey;
+	color: white;
+}
+
+#results{
+	border: solid orange 12px;
+	position: relative;
+	top: -300px;
+	width: 340px;
+	margin: auto;
+	height: 164px;
+	visibility: hidden;
+}
+
+#number-correct{
+	border: solid grey 6px;
+	margin: auto;
+	width: 100px;
+	height: 40px;
+	display: inline-block;
+	position: absolute;
+	margin-left: 220px;
+	text-align: center;
+	padding: 12px 0px 0px 0px;
+}
+
+#number-wrong{
+	border: solid grey 6px;
+	margin: auto;
+	width: 100px;
+	height: 40px;
+	display: inline-block;
+	position: absolute;
+	margin-left: 220px;
+	margin-top: 80px;
+	text-align: center;
+	padding: 12px 0px 0px 0px;
+}
+
+#correct{
+	border: solid grey 6px;
+	width: 200px;
+	height: 20px;
+	display: inline-block;
+	color: white;
+	background-color: grey;
+	font-size: 10px
+	font-weight: bold;
+	text-align: center;
+	padding-top: 2px;
+	position: absolute;
+}
+
+#wrong{
+	border: solid grey 6px;
+	width: 200px;
+	height: 20px;
+	display: inline-block;
+	color: white;
+	background-color: grey;
+	font-size: 10px
+	font-weight: bold;
+	text-align: center;
+	padding-top: 2px;
+	position: absolute;
+	margin-top: 80px;
+}
+
+#spacer{
+	margin-left: 6px;
+	margin-top: 6px;
+}
+
+p{
+	color: grey;
+}
+
+
+
+
+
